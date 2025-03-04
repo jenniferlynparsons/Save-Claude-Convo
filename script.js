@@ -62,7 +62,7 @@ function downloadContent(content, format) {
     const a = document.createElement('a');
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
     a.href = url;
-    a.download = `claude-chat-${timestamp}.${format === 'json' ? 'json' : 'txt'}`;
+    a.download = `claude-chat-${timestamp}.${format === 'json' ? 'json' : 'md'}`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
